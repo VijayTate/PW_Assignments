@@ -1,0 +1,138 @@
+Q1. Create one variable containing following type of data:
+
+my_string = 'my name is Vijay'
+my_list = [1,2,3, 'orange','red',True]
+my_float = 3.3
+my_tuple = (10,20,30,40)
+
+
+
+Q2. Given are some following variables containing data: 
+(i)	var1 = ‘ ‘ 
+(ii)	(ii) var2 = ‘[ DS , ML , Python]’ 
+(iii)	(iii) var3 = [ ‘DS’ , ’ML’ , ‘Python’ ] 
+(iv)	(iv) var4 = 1.
+What will be the data type of the above given variable.
+
+var1 = string
+var2 = string
+var3 = list
+var4 = float
+
+
+
+Q3. Explain the use of the following operators using an example:
+
+(i)	/
+This operator is used for division. It returns the quotient as a float value.
+Example: 
+a=10
+b=3
+print(a/b)
+#Output: 3.33
+
+(ii)	%
+This operator is used for finding the remainder of the division operation. It returns the remainder as an integer value.
+Example:
+a=10
+b=3
+print(a%b)
+#Output: 1
+
+(iii)	//
+This operator performs division and returns the quotient as an integer, discarding the fractional part.
+Example:
+a=10
+b=3
+print(a//b)
+#Output: 3
+
+(iv)	**
+This operator raises a number to a power. It calculates the result of the base number raised to the power of the exponent.
+Example:
+a = 2
+b = 3
+print(a**b)
+# Output: 8
+
+
+
+Q4. Create a list of length 10 of your choice containing multiple types of data. Using for loop print the element and its data type.
+
+my_list = [10, "Hello", 3.14, True, [1, 2, 3], {"name": "John", "age": 25}, ('a', 'b'), None, 5 + 2j, False]
+for element in my_list:
+    print(f"Element: {element}, Data Type: {type(element).__name__}")
+# Output
+Element: 10, Data Type: int
+Element: Hello, Data Type: str
+Element: 3.14, Data Type: float
+Element: True, Data Type: bool
+Element: [1, 2, 3], Data Type: list
+Element: (10, 20, 30), Data Type: tuple
+Element: ('a', 'b'), Data Type: tuple
+Element: 0, Data Type: int
+Element: (5+2j), Data Type: complex
+Element: False, Data Type: bool
+
+
+
+Q5. Using a while loop, verify if the number A is purely divisible by number B and if so then how many times it can be divisible.
+
+def count_divisions(a, b):
+    count = 0
+    while a % b == 0:
+        a //= b  # Integer division
+        count += 1
+    return count
+
+# Taking input from the user
+a = int(input("Enter the number A: "))
+b = int(input("Enter the number B: "))
+
+# Calling the function to count divisions
+divisions = count_divisions(a, b)
+
+if divisions > 0:
+    print(f"{a} is divisible by {b} and can be divided {divisions} times.")
+else:
+    print(f"{a} is not divisible by {b}.")
+
+
+
+Q6. Create a list containing 25 int type data. Using for loop and if-else condition print if the element is divisible by 3 or not.
+
+# Create a list of 25 integers
+numbers = [12, 5, 9, 18, 7, 21, 14, 6, 11, 30, 27, 4, 17, 22, 8, 15, 3, 20, 13, 16, 10, 25, 19, 2, 24]
+
+# Iterate over each element in the list
+for number in numbers:
+    if number % 3 == 0:
+        print(f"{number} is divisible by 3.")
+    else:
+        print(f"{number} is not divisible by 3.")
+        
+        
+
+Q7. What do you understand about mutable and immutable data types? Give examples for both showing this property.
+
+In Python, data types can be classified as either mutable or immutable based on whether their values can be changed after they are created. Here's a brief explanation of mutable and immutable data types:
+
+Mutable Data Types:
+
+Mutable data types allow modifications to their values even after they are created.
+Changes to mutable objects are reflected directly in-place without the need to create a new object.
+Examples of mutable data types in Python include lists, sets, and dictionaries.
+Example:
+my_list = [1, 2, 3]
+my_list.append(4)  # Modifying the list by adding an element
+print(my_list)  # Output: [1, 2, 3, 4]
+
+Immutable Data Types:
+
+Immutable data types, once created, cannot be modified. Any operation that seems to modify an immutable object actually creates a new object with the modified value.
+Immutable objects preserve their original values, and any change results in a new object being created.
+Examples of immutable data types in Python include integers, floats, strings, and tuples.
+Example:
+my_string = "Hello"
+my_string = my_string + " World!"  # Concatenating two strings to create a new string
+print(my_string)  # Output: "Hello World!"
